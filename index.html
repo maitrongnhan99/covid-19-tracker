@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+    <title>Covid-19 Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar start -->
+        <aside class="menu">
+            <div class="top">
+                <div class="logo">
+                    <img src="./assets/img/logo.png" alt="Covid-19 Tracker Logo">
+                    <div>
+                        <h4 class="text-muted"><span class="danger">Covid</span>-19</h4>
+                        <h2 class="text-muted">TRAC<span class="warning">KER</span></h2>
+                    </div>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Statictics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">public</span>
+                    <h3>Global Cases</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">3</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- Sidebar end -->
+
+        <!-- Main start -->
+        <main class="main">
+            <h1>Dashboard</h1>
+            <!-- Insights start -->
+            <div class="insights">
+                <div class="comfirmed">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Today Confirmed</h3>
+                            <h1 id="comfirmed-number">25,024</h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='36' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <small class="text-muted" id="date__statistics">Last 24 hours</small>
+                </div>
+
+                <div class="death">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Today Deaths</h3>
+                            <h1 id="death-number">14,160</h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='36' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <small class="text-muted" id="date__statistics">Last 24 hours</small>
+                </div>
+
+                <div class="recovered">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Today Recovered</h3>
+                            <h1 id="recovered-number">10,160</h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='36' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <small class="text-muted" id="date__statistics">Last 24 hours</small>
+                </div>
+            </div>
+            <!-- Insights end -->
+
+            <!-- Global start -->
+            <div class="global">
+                <h2>Global</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contry</th>
+                            <th>New Comfirmed</th>
+                            <th>New Recovered</th>
+                            <th>New Deaths</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td class="warning">...</td>
+                            <td class="primary">...</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <a id="show-all" href="#">Show All</a>
+            </div>
+            <!-- Global start -->
+        </main>
+        <!-- Main end -->
+        
+        <!-- Right side start -->
+        <div class="right">
+            <!-- Start Top -->
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Nhan</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+            </div>
+            <!-- End top -->
+
+            <!-- Start Most Affected -->
+            <div class="most-affected">
+                <h2>Most affected</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img id="comfirmed-flag" src="" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b id="most-comfirmed"></b> the most total confirmed cases <span class="number-cases comfirmed danger"></span></p>
+                            <small class="text-muted">1 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img id="death-flag" src="" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b id="most-death"></b> the highest number of deaths <span class="number-cases death"></span></p>
+                            <small class="text-muted">1 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img id="recovered-flag" src="" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b id="least-recovered"></b> the least number of recovered cases <span class="number-cases recovered"></span></p>
+                            <small class="text-muted">1 Minutes Ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-info">
+                    <ul class="info__list">
+                        <li class="info__item">
+                            <h3>Country</h3>
+                            <span class="name"></span>
+                        </li>
+                        <li class="info__item">
+                            <h3>Flag</h3>
+                            <img src="" alt="" class="flag">
+                        </li>
+                        <li class="info__item">
+                            <h3>Capital</h3>
+                            <span class="capital"></span>
+                        </li>
+                        <li class="info__item">
+                            <h3>Region</h3>
+                            <span class="region"></span>
+                        </li>
+                        <li class="info__item">
+                            <h3>Subregion</h3>
+                            <span class="subregion"></span>
+                        </li>
+                        <li class="info__item">
+                            <h3>Population</h3>
+                            <span class="population"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Most Affected -->
+
+
+            <!-- Start Analytics -->
+            <div class="analytics">
+                <h2>Analytics</h2>
+                <!-- <div class="input-country">
+                    <input type="text">
+                </div> -->
+                <form action="/" class="item select-country">
+                    <label for="countries">Select country:</label>
+                    <select name="countries" id="countries" class="countries">
+                    </select>
+                  </form>
+
+                <div class="item comfirmed">
+                    <div class="icon">
+                        <span class="material-icons-sharp">addchart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Today Comfirmed</h3>
+                            <smal class="text-muted">1 Minutes Ago</smal>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3948</h3>
+                    </div>
+                </div>
+                <div class="item death">
+                    <div class="icon">
+                        <span class="material-icons-sharp">trending_down</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Today Deaths</h3>
+                            <smal class="text-muted">1 Minutes Ago</smal>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>1100</h3>
+                    </div>
+                </div>
+                <div class="item recovered">
+                    <div class="icon">
+                        <span class="material-icons-sharp">healing</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Today Recovered</h3>
+                            <smal class="text-muted">1 Minutes Ago</smal>
+                        </div>
+                        <h5 class="success">+25%</h5>
+                        <h3>848</h3>
+                    </div>
+                </div>
+
+                <div class="item add-country">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Add Country</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Analytics -->
+        </div>
+        <!-- Right side end -->
+       
+    </div>
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
